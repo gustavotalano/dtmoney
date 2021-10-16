@@ -2,7 +2,6 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
     :root {
-        /* --background: #f0f2f5; */
         --red: #E52E4D;
         --green: #33CC95;
         --blue: #5429CC;
@@ -18,8 +17,6 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
     }
-
-    // font-size padrão -> 16px (desktop)
 
     html {
         @media (max-width: 1080px) {
