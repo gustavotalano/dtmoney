@@ -28,26 +28,26 @@ export function Summary() {
     <Container>
       <div>
         <header>
-          <p>Entradas</p>
-          <img src={incomeImg} alt="Entradas" />
+          <p>Incomes</p>
+          <img src={incomeImg} alt="Incomes" />
         </header>
         <strong>
-          {new Intl.NumberFormat('pt-BR', {
+          {new Intl.NumberFormat('en-US', {
             style: 'currency',
-            currency: 'BRL'
+            currency: 'USD'
           }).format(summary.deposits)}
         </strong>
       </div>
 
       <div>
         <header>
-          <p>Saídas</p>
-          <img src={outcomeImg} alt="Saídas" />
+          <p>Outcomes</p>
+          <img src={outcomeImg} alt="Outcomes" />
         </header>
-        <strong>-
-          {new Intl.NumberFormat('pt-BR', {
+        <strong>
+           {new Intl.NumberFormat('en-US', {
           style: 'currency',
-          currency: 'BRL'
+          currency: 'USD'
           }).format(summary.withdraws)}
         </strong>
       </div>
@@ -58,9 +58,9 @@ export function Summary() {
           <img src={totalImg} alt="Total" />
         </header>
         <strong>
-          {new Intl.NumberFormat('pt-BR', {
+          {new Intl.NumberFormat('en-US', {
             style: 'currency',
-            currency: 'BRL'
+            currency: 'USD'
           }).format(summary.total)}
         </strong>
       </div>

@@ -54,17 +54,17 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
       </button>
 
       <Container onSubmit={handleCreateNewTransaction}>
-        <h2>Cadastrar transação</h2>
+        <h2>Register transaction</h2>
 
         <input
-          placeholder="Título"
+          placeholder="Title"
           value={title}
           onChange={event => setTitle(event.target.value)}
         />
 
         <input
           type="number"
-          placeholder="Valor"
+          placeholder="Amount"
           value={amount}
           onChange={event => setAmount(Number(event.target.value))}
         />
@@ -76,8 +76,8 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
             isActive={type === 'deposit'}
             activeColor="green"
           >
-            <img src={incomeImg} alt="Entrada" />
-            <span>Entrada</span>
+            <img src={incomeImg} alt="Income" />
+            <span>Income</span>
           </RadioBox>
 
           <RadioBox
@@ -86,19 +86,19 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
             isActive={type === 'withdraw'}
             activeColor="red"
           >
-            <img src={outcomeImg} alt="Saída" />
-            <span>Saída</span>
+            <img src={outcomeImg} alt="Outcome" />
+            <span>Outcome</span>
           </RadioBox>
         </TransactionTypeContainer>
 
         <input
-          placeholder="Categoria"
+          placeholder="Category"
           value={category}
           onChange={event => setCategory(event.target.value)}
         />
 
         <button type="submit">
-          Cadastrar
+          Submit
         </button>
       </Container>
     </Modal>
